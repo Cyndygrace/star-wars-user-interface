@@ -11,6 +11,11 @@
           max-width="120"
           src="../assets/image/logo.png"
         ></v-img>
+        <!-- logo beside text -->
+        <v-card-text class="flex-grow-1 display-1 font-weight-bold text-center my-12 mb-0 pb-0">
+          <v-img class="white--text mx-auto my-12 mb-0" height="50px" max-width='120' src="../assets/image/logo.png"></v-img>
+          Directory
+        </v-card-text>
       </v-img>
     </v-card>
   </div>
