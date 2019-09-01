@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- container -->
-    <v-card hover flat height="500" class="mx-auto">
+    <v-card app hover flat height="500" class="mx-auto">
       <!-- image background -->
       <v-img class="white--text" height="640px" src="../assets/image/hero-banner.jpg">
         <!-- logo -->
@@ -12,39 +12,44 @@
           src="../assets/image/logo.png"
         ></v-img>
         <!-- logo beside text -->
-        <v-card-text class="flex-grow-1 display-1 font-weight-bold text-center my-12 mb-0 pb-0">
-          <v-img
-            class="white--text mx-auto my-12 mb-0"
+<div class='text-center my-12 mb-0'>
+        <span class="text-center display-1 font-weight-bold my-12">
+          
+          <img
+            class="white--text text-center my-12 mb-0"
             height="50px"
             max-width="120"
             src="../assets/image/logo.png"
-          ></v-img>Directory
-        </v-card-text>
+          />Directory
+        </span>
+</div>
         <!-- horizontal line -->
         <v-divider
-          class="success pt-1 mx-auto white mt-0"
+          class="pt-1 mx-auto white mt-0"
           style="opacity: 4"
           role="seperator"
           width="300"
           aria-orientation="horizontal"
         ></v-divider>
+      
         <v-card-text
-          class="text-center mb-0 pb-0"
+          class="text-center mb-0 pb-0 title"
         >Find your favourite characters, films, species, starship and planets, Directory</v-card-text>
+      
         <!-- earch input -->
         <v-form>
-          <v-container height="200px">
+          <v-container height="200px" class="large">
             <v-row>
-              <v-col cols="12" sm="6" class="mx-auto">
+              <v-col cols="12" sm="6" class="mx-auto" >
                 <v-text-field
-                  large
+                class='display-1 large'
+                  height="60"
                   v-model="first"
                   prepend-inner-icon="mdi-magnify"
                   label="Search"
                   solo
-                  height="24"
                 >
-                  <v-icon left>mdi-magnify</v-icon>
+                  <!-- <v-icon left large>mdi-magnify</v-icon> -->
                 </v-text-field>
               </v-col>
             </v-row>
