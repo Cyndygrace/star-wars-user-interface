@@ -1,26 +1,27 @@
 <template>
-  <div class='home'>
-    <h1>Homepage</h1>
-    <!-- to get more of this class format, search for color on the vue site -->
-    <p class='teal darken-4 indigo--text' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed tempora cum incidunt dolore qui voluptatibus autem labore modi magnam earum.</p>
-    <p class='pink lighten-4 black--text text--darken-4' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed tempora cum incidunt dolore qui voluptatibus autem labore modi magnam earum.</p>
-    <!-- for more text size, weight classes and so much more props on text, search for font size page on the vue site -->
-<h1 class='display-4 font-weight-bold'> Massive Display</h1>
-<h1 class='display-3'> Smaller Display</h1>
-<h1 class='display-2'> Smaller Display</h1>
-<h1 class='display-1'> Smaller Display</h1>
-<h1 class='headline'> This is a headline</h1>
+  <div class="home">
+    
+  <Title v-bind:title='title1.text'/>
+  <Title v-bind:title='title2.text'/>
+  <Title v-bind:title='title3.text'/>
 
-
-
-
-    </div>
+  </div>
 </template>
 
 <script>
-
-
+import Title from '../components/Title'
 export default {
-  name: 'Home'
-};
+name: 'Home',
+components: {
+Title
+},
+data() {
+    return {
+          title1: {text:'Popular Starship'},
+          title2: {text:"Popular Planets"},
+          title3: {text:"Popular Characters"},
+      header: { text: "Things To Do" }
+    };
+  },
+}
 </script>
