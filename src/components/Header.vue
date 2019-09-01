@@ -16,6 +16,14 @@
           <v-img class="white--text mx-auto my-12 mb-0" height="50px" max-width='120' src="../assets/image/logo.png"></v-img>
           Directory
         </v-card-text>
+        <!-- horizontal line -->
+         <v-divider
+          class="success pt-1 mx-auto white mt-0"
+          style="opacity: 4"
+          role="seperator"
+          width="300"
+          aria-orientation="horizontal"
+        ></v-divider>
       </v-img>
     </v-card>
   </div>
