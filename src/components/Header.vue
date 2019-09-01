@@ -46,7 +46,7 @@
                   height="60"
                   v-model="first"
                   prepend-inner-icon="mdi-magnify"
-                  label="Search"
+                  label="Enter a search term"
                   solo
                 >
                   <!-- <v-icon left large>mdi-magnify</v-icon> -->
@@ -62,6 +62,6 @@
 
 <script>
 export default {
-  // name: Header
+  name: 'Header'
 }
 </script>>
