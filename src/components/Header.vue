@@ -1,7 +1,7 @@
 <template>
-  <div>
+<div>
     <!-- container -->
-    <v-card app hover flat height="500" class="mx-auto">
+    <v-card hover flat height="640" class="mx-auto">
       <!-- image background -->
       <v-img class="white--text" height="640px" src="../assets/image/hero-banner.jpg">
         <!-- logo -->
@@ -62,9 +62,6 @@
 
 <script>
 export default {
-  name: "Header"
-};
+  // name: Header
+}
 </script>>
-
-<style scoped>
-</style>>
