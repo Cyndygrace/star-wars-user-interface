@@ -24,6 +24,9 @@
           width="300"
           aria-orientation="horizontal"
         ></v-divider>
+        <v-card-text
+            class="text-center mb-0 pb-0"
+          >Find your favourite characters, films, species, starship and planets, Directory</v-card-text>
       </v-img>
     </v-card>
   </div>
