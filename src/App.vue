@@ -1,7 +1,6 @@
 <template>
   <v-app>
     <Header />
-
     <v-content>
       <router-view></router-view>
     </v-content>
@@ -17,8 +16,6 @@ export default {
     Header
   },
 
-  data: () => ({
-    //
-  })
+  data: () => ({})
 };
 </script>
