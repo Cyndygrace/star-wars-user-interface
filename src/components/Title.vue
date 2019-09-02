@@ -7,12 +7,11 @@
 </div>
         <!-- horizontal line -->
         <v-divider
-          class="info pt-1 mx-auto mt-2 white mt-0"
+          class="primary pt-1 mx-auto mt-2 white mt-0 mb-12"
           style="opacity: 4"
           role="seperator"
           width="100"
           aria-orientation="horizontal"
-          indigo
         ></v-divider>
     </div>
 </template>
@@ -22,12 +21,8 @@
 export default {
   name:'Title',
   props:['title'],
-  data(){
-    title: {
-      text: text
-    }
   }
-}
+
 </script>>
 
 <style scoped>
