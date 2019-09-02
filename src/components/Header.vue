@@ -34,17 +34,18 @@
       
         <v-card-text
           class="text-center mb-0 pb-0 title"
-        >Find your favourite characters, films, species, starship and planets, Directory</v-card-text>
+        >Find your favourite characters, films, species,<br/>
+         starship and planets, Directory</v-card-text>
       
         <!-- earch input -->
-        <v-form>
-          <v-container height="200px" class="large">
+        <v-form v-on:click='submit'>
+          <v-container >
             <v-row>
               <v-col cols="12" sm="6" class="mx-auto" >
                 <v-text-field
-                class='display-1 large'
-                  height="60"
-                  v-model="first"
+                class='display-1 font-weight-bold font-size-20'
+                  height="70"
+                  v-model="search"
                   prepend-inner-icon="mdi-magnify"
                   label="Enter a search term"
                   solo
@@ -62,6 +63,17 @@
 
 <script>
 export default {
-  name: 'Header'
+  name: 'Header',
+  data() {
+  return {
+    search:''
+  }
+},
+methods: {
+  submit() {
+    console.log(this.search)
+  }
 }
+}
+
 </script>>
