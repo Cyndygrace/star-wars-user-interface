@@ -22,3 +22,8 @@ yarn-error.log*
 
 # my personal read me for learning
 reeadme.md
+BodyText.vue
+CardText.vue
+HorizontalLine.vue
+Picture.vue
+test.vue
