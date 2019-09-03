@@ -1,15 +1,17 @@
 <template>
   <div>
-    <div v-bind:key="starship.id" v-for="starship in starships">
+    <div v-bind:key="starship.name" v-for="starship in starships">
       <v-row class="mx-auto ml-12">
         <!-- <v-col> -->
-      <v-card class="mb-12" max-width="350">
+      <v-card hover class="mb-12" max-width="350">
         <v-img class="white--text" height="200px" src="../assets/image/starship-1.jpg"></v-img>
 
         <v-card-text class="justify-content">
-          <v-card-title class="headline text--primary pt-0 pb-0 pl-0">{{starship.title}}</v-card-title>
+          <v-card-title class="headline text--primary pt-0 pb-0 pl-0">Name: {{starship.name}}</v-card-title>
           <br />
-          <span class="py-0">{{starship.description}}</span>
+          <span class="py-0 subtitle-1">Model: {{starship.starship_class}}</span>
+          <br />
+          <span class="py-0 subtitle-1">Capacity: {{starship.cargo_capacity}}</span>
           <br />
         </v-card-text>
 
