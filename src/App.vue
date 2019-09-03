@@ -6,7 +6,13 @@
     </v-content>
   </v-app>
 </template>
+<style lang="scss">
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
+.application {
+  font-family: "Montserrat";
+}
+</style>
 <script>
 import Header from "./components/Header";
 
