@@ -7,7 +7,7 @@
         <v-img class="white--text" height="200px" src="../assets/image/starship-1.jpg"></v-img>
 
         <v-card-text class="justify-content">
-          <v-card-title class="headline text--primary pt-0 pb-0 pl-0">Name: {{starship.name}}</v-card-title>
+          <v-card-title class="title font-weight-bold text--primary pt-0 pb-0 pl-0">Name: {{starship.name}}</v-card-title>
           <br />
           <span class="py-0 subtitle-1">Model: {{starship.starship_class}}</span>
           <br />
