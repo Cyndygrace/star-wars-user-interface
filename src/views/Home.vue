@@ -1,13 +1,13 @@
 <template>
   <div class="home">
     <Title v-bind:title="title1.text" />
-   
-    <StarshipCard v-bind:starships='starships'/>
-   
+
+    <StarshipCard v-bind:starships="starships" />
+
     <Title v-bind:title="title2.text" />
-    <v-row class='mx-auto ml-12'>
+    <v-row class="mx-auto ml-12">
       <v-col>
-        <PlanetCard v-bind:planets='planets'/>
+        <PlanetCard v-bind:planets="planets" />
       </v-col>
       <v-col>
         <PlanetCard />
@@ -18,9 +18,8 @@
     </v-row>
 
     <Title v-bind:title="title3.text" />
-   
-        <CharacterCard v-bind:characters='characters'/>
-      
+
+    <CharacterCard v-bind:characters="characters" />
   </div>
 </template>
 
@@ -29,6 +28,8 @@ import Title from "../components/Title";
 import CharacterCard from "../components/CharacterCard";
 import StarshipCard from "../components/StarshipCard";
 import PlanetCard from "../components/PlanetCard";
+import axios from "axios";
+
 export default {
   name: "Home",
   components: {
@@ -43,48 +44,48 @@ export default {
       title2: { text: "Popular Planets" },
       title3: { text: "Popular Characters" },
       starships: [
-        {
-          id: 1,
-          image: "",
-          title: "Ghost",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate similique fugiat aspernatur natus facilis aperiam tempora nostrum repudiandae placeat fuga"
-        },
-        {
-          id: 2,
-          image: "",
-          title: "Correllian Scout",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate similique fugiat aspernatur natus facilis aperiam tempora nostrum repudiandae placeat fuga"
-        },
-        {
-          id: 3,
-          image: "",
-          title: "Raven's claw",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate similique fugiat aspernatur natus facilis aperiam tempora nostrum repudiandae placeat fuga"
-        },
-        {
-          id: 4,
-          image: "",
-          title: "Loronar-E9 Explorer",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate similique fugiat aspernatur natus facilis aperiam tempora nostrum repudiandae placeat fuga"
-        },
-        {
-          id: 5,
-          image: "",
-          title: "Raven's claw",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate similique fugiat aspernatur natus facilis aperiam tempora nostrum repudiandae placeat fuga"
-        },
-        {
-          id: 6,
-          image: "",
-          title: "Outrider",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate similique fugiat aspernatur natus facilis aperiam tempora nostrum repudiandae placeat fuga"
-        }
+        // {
+        //   id: 1,
+        //   image: "",
+        //   title: "Ghost",
+        //   description:
+        //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate similique fugiat aspernatur natus facilis aperiam tempora nostrum repudiandae placeat fuga"
+        // },
+        // {
+        //   id: 2,
+        //   image: "",
+        //   title: "Correllian Scout",
+        //   description:
+        //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate similique fugiat aspernatur natus facilis aperiam tempora nostrum repudiandae placeat fuga"
+        // },
+        // {
+        //   id: 3,
+        //   image: "",
+        //   title: "Raven's claw",
+        //   description:
+        //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate similique fugiat aspernatur natus facilis aperiam tempora nostrum repudiandae placeat fuga"
+        // },
+        // {
+        //   id: 4,
+        //   image: "",
+        //   title: "Loronar-E9 Explorer",
+        //   description:
+        //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate similique fugiat aspernatur natus facilis aperiam tempora nostrum repudiandae placeat fuga"
+        // },
+        // {
+        //   id: 5,
+        //   image: "",
+        //   title: "Raven's claw",
+        //   description:
+        //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate similique fugiat aspernatur natus facilis aperiam tempora nostrum repudiandae placeat fuga"
+        // },
+        // {
+        //   id: 6,
+        //   image: "",
+        //   title: "Outrider",
+        //   description:
+        //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate similique fugiat aspernatur natus facilis aperiam tempora nostrum repudiandae placeat fuga"
+        // }
       ],
       planets: [
         {
@@ -139,6 +140,14 @@ export default {
       ],
       header: { text: "Things To Do" }
     };
+  },
+  created() {
+    axios
+      .get("https://swapi.co/api/starships/?_limit=6")
+      .then(res =>this.starships = res.data.results)
+      .then(console.log(this.starships))
+      .catch(error => console.log(error));
   }
 };
 </script>
+
