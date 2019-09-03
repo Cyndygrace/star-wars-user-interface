@@ -2,23 +2,24 @@
   <div>
     <div v-bind:key="character.id" v-for="character in characters">
       <v-row class="mx-auto ml-12">
-        <v-card class="py-0" max-width="600">
-          <v-row>
-            <v-col>
-              <v-img class="my-0" height="100%" width="350" src="../assets/image/character-1.jpg"></v-img>
-            </v-col>
+
+        <v-card hover class="py-0 mb-12" max-height='390' max-width="600">
+          
+            <v-row>
+              <v-img class="my-0 " width="100" height='390' src="../assets/image/character-1.jpg"></v-img>
+            
             <v-col>
               <v-card-text class="pb-0">
-                <p class="display-1 text--primary mb-0">{{character.name}}</p>
-                <div class="mb-4">{{character.title}}</div>
+                <p class="title font-weight-bold text--primary mb-0">{{character.name}}</p>
+                <div class="mb-4">{{character.birth_year}}</div>
 
-                <div class="text--primary">{{character.description}}</div>
+                <div class="text--primary">{{character.gender}}</div>
               </v-card-text>
               <v-card-actions class="pt-0 pb-0">
-                <v-btn text color="black accent-4">Read More</v-btn>
+                <v-btn text small class=" black--text">Read More</v-btn>
               </v-card-actions>
               <v-divider
-                class="primary ml-5 pt-1 white mt-0"
+                class=" ml-4 pt-1 black mt-0"
                 style="opacity: 4"
                 role="seperator"
                 width="100"
