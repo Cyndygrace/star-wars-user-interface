@@ -10,10 +10,10 @@
             
             <v-col>
               <v-card-text class="pb-0">
-                <p class="title font-weight-bold text--primary mb-0">{{character.name}}</p>
-                <div class="mb-4">{{character.birth_year}}</div>
+                <p class="title font-weight-bold text--primary mb-0">Name: <br>{{character.name}}</p>
+                <div class="mb-4">Year: {{character.birth_year}}</div>
 
-                <div class="text--primary">{{character.gender}}</div>
+                <div class="text--primary">Gender: {{character.gender}}</div>
               </v-card-text>
               <v-card-actions class="pt-0 pb-0">
                 <v-btn text small class=" black--text">Read More</v-btn>
