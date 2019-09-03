@@ -12,6 +12,5 @@ export default new Vuetify({
       info: '#000000',
       error: '#f83e70'
     }
-  },
-  
+  }
 });
