@@ -5,9 +5,7 @@
     <StarshipsPage/>
 
     <Title v-bind:title="title2.text" />
-    
         <PlanetsPage />
-
     <Title v-bind:title="title3.text" />
 
     <CharactersPage />
