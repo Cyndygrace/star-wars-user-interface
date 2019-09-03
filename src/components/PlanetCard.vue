@@ -1,9 +1,13 @@
 <template>
   <v-card
+  elevation
+  hover
     class=""
     max-width="350"
   >
     <v-img
+    elevation
+    hover
       class="white--text"
       height="400px"
       src="../assets/image/planet-1.jpg"
