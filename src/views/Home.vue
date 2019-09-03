@@ -144,7 +144,7 @@ export default {
   created() {
     axios
       .get("https://swapi.co/api/starships/?_limit=6")
-      .then(res =>this.starships = res.data.results)
+      .then(res => (this.starships = res.data.results))
       .then(console.log(this.starships))
       .catch(error => console.log(error));
   }
