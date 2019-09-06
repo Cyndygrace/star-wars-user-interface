@@ -7,7 +7,7 @@
 </div>
         <!-- horizontal line -->
         <v-divider
-          class="black pt-1 mx-auto mt-2 mt-0 mb-12"
+          class="black pt-1 mx-auto mt-2 mt-0 mb-4"
           style="opacity: 4"
           role="seperator"
           width="100"
