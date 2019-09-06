@@ -1,9 +1,9 @@
 <template>
   <div>
     <!-- container -->
-    <v-card hover flat height="550" class="mx-auto">
+    <v-card hover flat height="750" class="mx-auto">
       <!-- image background -->
-      <v-img class="white--text" height="550px" src="../assets/image/hero-banner.jpg">
+      <v-img class="white--text" height="750px" src="../assets/image/hero-banner.jpg">
         <!-- logo -->
         <v-img
           class="white--text ml-4 mt-4"
@@ -12,7 +12,7 @@
           src="../assets/image/logo.png"
         ></v-img>
         <!-- logo beside text -->
-        <div class="text-center my-12 mb-0">
+        <div class="text-center my-12 mb-0 ">
           <span class="text-center display-1 font-weight-bold my-12 mb-12">
             <img
               class="white--text text-center my-8 mb-0 mr-4"
@@ -23,7 +23,7 @@
         </div>
         <!-- horizontal line -->
         <v-divider
-          class="pt-1 mx-auto white mt-0 mt-2 mb-2"
+          class="pt-1 mx-auto mt-0 mt-2 mb-2 grey lighten-1"
           style="opacity: 4"
           role="seperator"
           width="300"
@@ -76,7 +76,7 @@ export default {
   },
   methods: {
     submit() {
-      console.log(this.search);
+      // console.log(this.search);
     }
   }
 };
